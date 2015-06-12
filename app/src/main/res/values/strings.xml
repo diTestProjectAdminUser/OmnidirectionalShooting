@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">OmnidirectionalShooting</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_title">TitleActivity</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_score">ScoreActivity</string>
+    <string name="title_activity_game">GameActivity</string>
+
+
+    <string name="title_button_start">スタート</string>
+    <string name="title_button_setting">設定</string>
+</resources>
