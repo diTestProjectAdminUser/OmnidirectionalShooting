@@ -43,7 +43,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         this.setButtonText();
     }
 
-    public void setButtonText() {
+    private void setButtonText() {
         this.setIsEffect(getIsEffect());
         this.setIsBGM(getIsBGM());
     }
@@ -63,21 +63,21 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
             Log.e(TAG, "onClickError");
         }
     }
-    public void onClickEffectSwitchButton () {
+    private void onClickEffectSwitchButton () {
         this.setIsEffect(!_isEffect);
         effectButton.setSelected(_isEffect);
 
         Log.d(TAG, "onClickEffectSwitchButton");
     }
 
-    public void onClickBgmSwitchButton () {
+    private void onClickBgmSwitchButton () {
         this.setIsBGM(!_isBGM);
         bgmBtn.setSelected(_isBGM);
 
         Log.d(TAG, "onClickBgmSwitchButton");
     }
 
-    public void onClickBackButton () {
+    private void onClickBackButton () {
         Log.d(TAG, "onClickBackButton");
         finish();
     }
