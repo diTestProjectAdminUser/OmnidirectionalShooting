@@ -21,14 +21,26 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_button_start"
-            android:id="@+id/startBtn" />
+            android:text="easy"
+            android:id="@+id/easyBtn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="normal"
+            android:id="@+id/normalBtn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hard"
+            android:id="@+id/hardBtn" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_button_setting"
-            android:id="@+id/settingBtn" />
+            android:id="@+id/configBtn" />
     </LinearLayout>
 
 </RelativeLayout>
