@@ -9,11 +9,18 @@ import jp.co.di_system.android.omnidirectionalshooting.activity.base.BaseActivit
 
 public class TitleActivity extends BaseActivity implements View.OnClickListener {
 
+    // 難易度
+    private  static final int TYPE_EASY = 1;
+    private  static final int TYPE_NORMAL = 2;
+    private  static final int TYPE_HARD = 3;
+
+    // result cord
     private  static final int RESULT_CORD_EASY = 1000;
     private  static final int RESULT_CORD_NORMAL = 2000;
     private  static final int RESULT_CORD_HARD = 3000;
     private  static final int RESULT_CORD_CONFIG = 5000;
 
+    // ボタン
     private Button easyBtn;
     private Button normalBtn;
     private Button hardBtn;
@@ -71,7 +78,7 @@ public class TitleActivity extends BaseActivity implements View.OnClickListener 
     private void touchedEasyBtn(Button btn) {
 
         int resultCd = RESULT_CORD_EASY; //リザルトコードを任意で設定
-        startGame(resultCd,"EASY");
+        startGame(resultCd,TYPE_EASY);
 
     }
 
@@ -81,7 +88,7 @@ public class TitleActivity extends BaseActivity implements View.OnClickListener 
     private  void touchedNormalBtn(Button btn) {
 
         int resultCd = RESULT_CORD_NORMAL; //リザルトコードを任意で設定
-        startGame(resultCd,"NORMAL");
+        startGame(resultCd,TYPE_NORMAL);
 
     }
 
@@ -91,7 +98,7 @@ public class TitleActivity extends BaseActivity implements View.OnClickListener 
     private void touchedHardBtn(Button btn) {
 
         int resultCd = RESULT_CORD_HARD; //リザルトコードを任意で設定
-        startGame(resultCd,"HARD");
+        startGame(resultCd,TYPE_HARD);
 
     }
 
@@ -108,8 +115,10 @@ public class TitleActivity extends BaseActivity implements View.OnClickListener 
 
     /**
      * ゲーム画面に遷移する
+     * @param  resultCd リザルトコード
+     * @param  type 難易度
      */
-    private void startGame(int resultCd, String type) {
+    private void startGame(int resultCd, int type) {
 
         Intent intent = new Intent(TitleActivity.this, GameActivity.class);
         intent.putExtra("Type",type);
